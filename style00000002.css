@@ -1,0 +1,183 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
+}
+
+/* Header Section */
+header {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00ffff;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+    color: #f0f0f0;
+}
+
+/* Main Section */
+main {
+    flex: 1;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    overflow-y: scroll; /* Allow scrolling for long content */
+    max-height: 100vh; /* Restrict the height to the viewport */
+}
+
+/* Download Selected Button */
+#download-selected {
+    padding: 10px 20px;
+    background-color: #00ffff;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 255, 255, 0.5);
+}
+
+#download-selected:hover {
+    background-color: #008080;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+#audio-gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #ffcc00;
+    border-bottom: 2px solid #ffcc00;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+#audio-gallery #playlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Audio Items */
+.audio-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.audio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.audio-item h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.audio-item audio {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.audio-actions {
+    margin-top: 10px;
+}
+
+.audio-actions a,
+.audio-actions button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    background-color: #00ffff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.audio-actions a:hover,
+.audio-actions button:hover {
+    background-color: #008080;
+    color: #ffffff;
+}
+
+/* Normal Download Button */
+.download-single {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+.download-single:hover {
+    background-color: #ff9900;
+    color: #fff;
+}
+
+/* Footer Section */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #f0f0f0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    #audio-gallery h2 {
+        font-size: 1.5rem;
+    }
+
+    .audio-item {
+        width: 100%;
+    }
+
+    .audio-actions a,
+    .audio-actions button {
+        font-size: 0.9rem;
+    }
+}
